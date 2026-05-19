@@ -1,3 +1,29 @@
 <resources>
-    <string name="app_name">dapurandia</string>
+    <!-- App Name -->
+    <string name="app_name">Dapur Andia App</string>
+
+    <!-- Button & Navigation -->
+    <string name="back">Kembali</string>
+    <string name="register">Buat Akun</string>
+    <string name="login">Login</string>
+
+    <!-- Form Fields -->
+    <string name="email">Email</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+
+    <!-- Page Titles -->
+    <string name="login_pembeli">Login Pembeli</string>
+
+    <!-- Content Descriptions -->
+    <string name="chicken_image_desc">Gambar ayam lucu</string>
+
+    <!-- Toolbar -->
+    <string name="search">Search</string>
+    <string name="profile">Profile</string>
+
+    <!-- Informational Text -->
+    <string name="belum_punya_akun">Belum punya akun? Daftar di sini</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

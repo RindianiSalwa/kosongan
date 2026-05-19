@@ -1,0 +1,172 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E4E4E4"
+    >
+
+    <!-- App Bar -->
+    <LinearLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/maroon_700"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/backIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back"
+            app:tint="@android:color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detail Menu"
+            android:fontFamily="@font/quicksand_bold"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_marginStart="16dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- ScrollView untuk konten -->
+    <ScrollView
+        android:id="@+id/scrollContent"
+        android:layout_below="@id/appBar"
+        android:layout_above="@id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp">
+
+        <!-- CardView sebagai container utama -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            card_view:cardElevation="8dp"
+            app:cardCornerRadius="16dp"
+            app:cardMaxElevation="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+
+                <!-- Gambar Menu -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    android:layout_marginBottom="16dp">
+
+                    <ImageView
+                        android:id="@+id/imageViewMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:background="@android:color/darker_gray"/>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Nama Menu -->
+                <TextView
+                    android:id="@+id/textViewNamaMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ayam Geprek"
+                    android:fontFamily="@font/nunito_bold"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+                <!-- Stok -->
+                <TextView
+                    android:id="@+id/textViewStok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stok: 20"
+                    android:fontFamily="@font/nunito_regular"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="4dp" />
+
+                <!-- Harga -->
+                <TextView
+                    android:id="@+id/textViewHarga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp. 13.000"
+                    android:fontFamily="@font/nunito_regular"
+                    android:textSize="14sp"
+                    android:textColor="@color/green"
+                    android:layout_marginTop="4dp" />
+
+                <!-- Deskripsi -->
+                <TextView
+                    android:id="@+id/textViewDeskripsi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#444"
+                    android:textSize="16sp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="8dp"
+                    android:lineSpacingExtra="4dp"
+                    android:fontFamily="@font/nunito_regular"
+                    android:text="Deskripsi panjang makanan akan tampil di sini..." />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+
+    <!-- Tombol Aksi di bawah -->
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/buttonUpdateStok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Update Stok"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/maroon_700"
+            android:padding="12dp"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/buttonEditMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Edit Menu"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/maroon_700"
+            android:padding="12dp"
+            android:layout_marginStart="8dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

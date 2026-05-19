@@ -1,81 +1,181 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:background="#FFFFFF"
-    android:padding="12dp"
-    android:gravity="center_vertical"
-    android:layout_marginBottom="10dp">
-
-    <ImageView
-        android:id="@+id/ivMakanan"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:scaleType="centerCrop"
-        android:background="#F0F0F0"
-        android:layout_marginEnd="12dp"/>
+    android:layout_marginBottom="10dp"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    app:strokeWidth="0dp">
 
     <LinearLayout
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tvNama"
-            android:text="Nama"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:textColor="#000000"
-            android:layout_marginBottom="4dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="14dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="12dp">
 
-        <TextView
-            android:id="@+id/tvHarga"
-            android:text="Rp 0"
-            android:textSize="13sp"
-            android:textColor="#FF6B00"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            <CheckBox
+                android:id="@+id/checkboxItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/red_coral"
+                android:layout_marginEnd="10dp"
+                android:scaleX="1.1"
+                android:scaleY="1.1" />
 
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imageMenu"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_food_placeholder"
+                app:shapeAppearanceOverlay="@style/RoundedImageCorner"
+                android:layout_marginEnd="12dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textNamaMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_bold"
+                    android:textSize="14sp"
+                    android:textColor="#1A1A1A"
+                    android:maxLines="2"
+                    android:ellipsize="end" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_stok_badge"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="3dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="6dp">
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_stok_dot"
+                        android:layout_marginEnd="4dp"
+                        android:contentDescription="stok" />
+
+                    <TextView
+                        android:id="@+id/textStokMenu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_bold"
+                        android:textSize="10sp"
+                        android:textColor="@color/red_coral" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textHargaMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_bold"
+                    android:textSize="15sp"
+                    android:textColor="@color/red_coral" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#F0F0F0"
+            android:layout_marginHorizontal="14dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="14dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="12dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonHapus"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:text="Hapus"
+                android:fontFamily="@font/nunito_bold"
+                android:textSize="12sp"
+                android:textColor="@color/red_coral"
+                android:paddingHorizontal="14dp"
+                app:strokeColor="@color/red_coral"
+                app:strokeWidth="1.5dp"
+                app:cornerRadius="17dp"
+                app:rippleColor="#1AE53935"
+                app:icon="@drawable/ic_trash"
+                app:iconSize="14dp"
+                app:iconTint="@color/red_coral"
+                app:iconPadding="4dp"
+                app:iconGravity="start" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_qty_stepper"
+                android:paddingHorizontal="2dp">
+
+                <ImageButton
+                    android:id="@+id/buttonKurang"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:src="@drawable/ic_minus"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:tint="@color/red_coral"
+                    android:padding="8dp"
+                    android:contentDescription="Kurangi jumlah" />
+
+                <TextView
+                    android:id="@+id/textJumlah"
+                    android:layout_width="34dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:fontFamily="@font/nunito_bold"
+                    android:textSize="15sp"
+                    android:textColor="#1A1A1A" />
+
+                <ImageButton
+                    android:id="@+id/buttonTambah"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:src="@drawable/ic_plus"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:tint="@color/red_coral"
+                    android:padding="8dp"
+                    android:contentDescription="Tambah jumlah" />
+
+            </LinearLayout>
+
+        </LinearLayout>
     </LinearLayout>
-
-    <!-- KONTROL JUMLAH -->
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
-
-        <Button
-            android:id="@+id/btnKurang"
-            android:text="-"
-            android:textColor="#FF6B00"
-            android:backgroundTint="#FFF0E6"
-            android:layout_width="32dp"
-            android:layout_height="32dp"/>
-
-        <TextView
-            android:id="@+id/tvJumlah"
-            android:text="1"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:textColor="#000000"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <Button
-            android:id="@+id/btnTambah"
-            android:text="+"
-            android:textColor="#FFFFFF"
-            android:backgroundTint="#FF6B00"
-            android:layout_width="32dp"
-            android:layout_height="32dp"/>
-
-    </LinearLayout>
-
-</LinearLayout>
+</com.google.android.material.card.MaterialCardView>

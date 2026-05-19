@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/red_coral"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarRiwayatPesanan"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/red_coral"
+            app:title="Riwayat Pesanan"
+            app:titleTextColor="@android:color/white"
+            app:titleTextAppearance="@style/ToolbarTitleStyle"
+            app:navigationIcon="@drawable/ic_back"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/red_coral"
+                android:paddingBottom="56dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="12dp"
+                    android:paddingHorizontal="24dp">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/lottieRiwayat"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        app:lottie_rawRes="@raw/dashboard_admin"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_clipToCompositionBounds="false" />
+
+                    <TextView
+                        android:id="@+id/tvHeaderTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Riwayat Pesanan"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="4dp" />
+
+                    <TextView
+                        android:id="@+id/tvHeaderSub"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Semua pesanan yang tercatat"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textColor="#CCFFFFFF"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp"
+                android:paddingBottom="32dp"
+                android:layout_marginTop="-32dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardFilter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="14dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="@color/bg_white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="16dp"
+                        android:paddingTop="14dp"
+                        android:paddingBottom="14dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="FILTER STATUS"
+                            android:textSize="10sp"
+                            android:letterSpacing="0.14"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:textColor="@color/text_muted"
+                            android:layout_marginBottom="10dp" />
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/chipGroupFilter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:singleSelection="true"
+                            app:selectionRequired="true">
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chipSemua"
+                                android:layout_width="wrap_content"
+                                android:layout_height="36dp"
+                                android:text="Semua"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:textSize="12sp"
+                                app:chipBackgroundColor="@color/selector_chip_bg"
+                                app:chipStrokeColor="@color/selector_chip_stroke"
+                                app:chipStrokeWidth="1.5dp"
+                                app:checkedIconVisible="false"
+                                style="@style/Widget.MaterialComponents.Chip.Filter"
+                                android:checked="true" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chipMenunggu"
+                                android:layout_width="wrap_content"
+                                android:layout_height="36dp"
+                                android:text="Menunggu"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:textSize="12sp"
+                                app:chipBackgroundColor="@color/selector_chip_bg"
+                                app:chipStrokeColor="@color/selector_chip_stroke"
+                                app:chipStrokeWidth="1.5dp"
+                                app:checkedIconVisible="false"
+                                style="@style/Widget.MaterialComponents.Chip.Filter" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chipDiproses"
+                                android:layout_width="wrap_content"
+                                android:layout_height="36dp"
+                                android:text="Diproses"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:textSize="12sp"
+                                app:chipBackgroundColor="@color/selector_chip_bg"
+                                app:chipStrokeColor="@color/selector_chip_stroke"
+                                app:chipStrokeWidth="1.5dp"
+                                app:checkedIconVisible="false"
+                                style="@style/Widget.MaterialComponents.Chip.Filter" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chipSelesai"
+                                android:layout_width="wrap_content"
+                                android:layout_height="36dp"
+                                android:text="Selesai"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:textSize="12sp"
+                                app:chipBackgroundColor="@color/selector_chip_bg"
+                                app:chipStrokeColor="@color/selector_chip_stroke"
+                                app:chipStrokeWidth="1.5dp"
+                                app:checkedIconVisible="false"
+                                style="@style/Widget.MaterialComponents.Chip.Filter" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chipDibatalkan"
+                                android:layout_width="wrap_content"
+                                android:layout_height="36dp"
+                                android:text="Dibatalkan"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:textSize="12sp"
+                                app:chipBackgroundColor="@color/selector_chip_bg"
+                                app:chipStrokeColor="@color/selector_chip_stroke"
+                                app:chipStrokeWidth="1.5dp"
+                                app:checkedIconVisible="false"
+                                style="@style/Widget.MaterialComponents.Chip.Filter" />
+
+                        </com.google.android.material.chip.ChipGroup>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tvJumlahHasil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 pesanan"
+                    android:textSize="10sp"
+                    android:letterSpacing="0.14"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="@color/text_muted"
+                    android:layout_marginBottom="10dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardRvWrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="@color/bg_white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="4dp">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvRiwayatPesanan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:nestedScrollingEnabled="false"
+                            android:padding="4dp"
+                            android:clipToPadding="false" />
+
+                        <LinearLayout
+                            android:id="@+id/layoutKosong"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:padding="40dp"
+                            android:visibility="gone">
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/lottieKosong"
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                app:lottie_rawRes="@raw/dashboard_admin"
+                                app:lottie_autoPlay="true"
+                                app:lottie_loop="true" />
+
+                            <TextView
+                                android:id="@+id/tvKosong"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tidak ada pesanan"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:textColor="@color/text_muted"
+                                android:textSize="14sp"
+                                android:layout_marginTop="12dp"
+                                android:gravity="center" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

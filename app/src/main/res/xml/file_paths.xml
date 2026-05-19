@@ -1,0 +1,4 @@
+<paths>
+    <!-- izinkan akses file PDF di folder Dokumen khusus aplikasi -->
+    <external-files-path name="docs" path="Documents/" />
+</paths>

@@ -1,5 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
+    <!-- Warna dasar -->
     <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+
+    <!-- Warna tema login -->
+    <color name="orange">#F47C1F</color> <!-- Background atas (judul + ayam) -->
+    <color name="deep_orange">#A5370F</color> <!-- Background bawah -->
+    <color name="button_orange">#F47C1F</color> <!-- Warna tombol login -->
+    <color name="blue_link">#2196F3</color> <!-- Warna teks link daftar -->
+
+    <!-- Tambahan (opsional) -->
+    <color name="hint_white">#B3FFFFFF</color> <!-- Hint putih transparan -->
+    <color name="shadow_gray">#66000000</color> <!-- Untuk bayangan jika butuh -->
+    <color name="red_cancel">#E53935</color>
+    <color name="green">#4CAF50</color> <!-- Hijau untuk status selesai -->
+<!-- WARNA BARU -->
+    <!-- Base Colors -->
+    <color name="orange_primary">#FF9800</color> <!-- Vibrant Orange -->
+    <color name="orange_light">#FFB74D</color>  <!-- Light Soft Orange -->
+    <color name="orange_dark">#F57C00</color>   <!-- Deep Orange -->
+    <color name="orange_accent">#FFA726</color> <!-- Accent Orange -->
+
+    <!-- Neutral Colors -->
+    <color name="bg_light">#FFF3E0</color> <!-- Soft Cream Background -->
+    <color name="background_white">#FFFFFF</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="divider">#BDBDBD</color>
+    <!-- Hint Text -->
+    <color name="text_hint">#9E9E9E</color> <!-- Medium Gray, lembut untuk hint -->
+
+
+    <!-- Success / Error States (opsional kalau perlu notifikasi dll) -->
+    <color name="success_green">#4CAF50</color>
+    <color name="error_red">#E53935</color>
+
+    <!-- =====================
+        BASE COLORS (DOMINAN)
+        ===================== -->
+    <color name="white_base">#FFFFFF</color>
+    <color name="white_soft">#FAFAFA</color>
+
+    <!-- =====================
+         PRIMARY ACCENT (MAROON)
+         ===================== -->
+    <color name="maroon_primary">#7B1E3A</color>
+    <color name="maroon_soft">#9B3A55</color>
+    <!-- Maroon utama (CTA / button utama) -->
+    <color name="maroon_700">#7B1E3A</color>
+    <color name="maroon_800">#65162F</color>
+    <color name="maroon_900">#4A0F22</color>
+    <color name="maroon_600">#8E2A3A</color>
+    <color name="maroon_500">#9B3A55</color>
+    <color name="maroon_300">#E6C1CB</color>
+    <color name="maroon_200">#F2DDE3</color>
+
+    <!-- =====================
+         NEUTRAL / SUPPORT
+         ===================== -->
+    <color name="gray_light">#F1F1F1</color>
+    <color name="gray_divider">#E5E7EB</color>
+    <color name="gray_text_secondary">#6B7280</color>
+    <color name= "creamm">#FFF8F3</color>
+    <!-- =====================
+         TEXT COLORS
+         ===================== -->
+    <color name="text_on_maroon">#FFFFFF</color>
+
+    <!-- =====================
+         OPTIONAL ACCENT
+         ===================== -->
+    <color name="gold_soft">#E6B566</color>
+
+
+    <color name="bg_page">#F0F4FF</color>
+    <color name="bg_white">#FFFFFF</color>
+    <color name="red_coral">#FF6B6B</color>
+    <color name="indigo_400">#6366F1</color>
+    <color name="orange_icon">#FF8C42</color>
+    <color name="field_bg">#F8FAFF</color>
+    <color name="text_dark">#1E293B</color>
+    <color name="text_muted">#94A3B8</color>
+    <color name="divider_color">#EEF2FF</color>
+    <color name="chip_green_text">#166534</color>
+    <color name="chip_blue_text">#1E40AF</color>
+    <color name="chip_orange_text">#92400E</color>
 </resources>

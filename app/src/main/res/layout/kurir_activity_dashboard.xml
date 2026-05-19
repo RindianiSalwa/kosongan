@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarKurir"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/maroon_700"
+        android:elevation="4dp"
+        android:theme="@style/ToolbarStyle.Orange"
+        app:title="Dashboard Kurir"
+        app:titleTextColor="@android:color/white"
+        app:titleTextAppearance="@style/ToolbarTitleStyle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <!-- Background atas -->
+    <View
+        android:id="@+id/topBackground"
+        android:layout_width="0dp"
+        android:layout_height="240dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Animasi Kurir -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/kuriranimation"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:layout_marginBottom="-70dp"
+        android:scaleType="centerInside"
+        android:scaleX="1.15"
+        android:scaleY="1.15"
+        app:layout_constraintBottom_toBottomOf="@id/topBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_clipToCompositionBounds="false"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/kurir" />
+
+    <!-- Card Konten -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/contentCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="@color/maroon_700"
+        app:layout_constraintTop_toBottomOf="@id/topBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center_horizontal">
+
+            <!-- Sapaan -->
+            <TextView
+                android:id="@+id/kurirGreeting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Halo Kurir!"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+
+            <!-- Subtext -->
+            <TextView
+                android:id="@+id/kurirSubtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Siap mengantar pesanan hari ini?"
+                android:textColor="@color/white"
+                android:fontFamily="@font/montserrat_bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Tombol Pesanan Aktif -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPesananAktif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pesanan perlu diantar"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/maroon_700"
+                app:cornerRadius="16dp"
+                app:backgroundTint="@color/white"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Tombol Riwayat Pesanan -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRiwayatPesanan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Riwayat Pesanan"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/maroon_700"
+                app:cornerRadius="16dp"
+                app:backgroundTint="@color/white"
+                android:layout_marginBottom="12dp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
