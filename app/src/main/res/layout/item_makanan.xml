@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#FFFFFF"
+    android:padding="12dp"
+    android:layout_marginBottom="10dp">
+
+    <!-- GAMBAR MAKANAN -->
+    <ImageView
+        android:id="@+id/ivMakanan"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        android:background="#F0F0F0"
+        android:layout_marginEnd="12dp"/>
+
+    <!-- INFO MAKANAN -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvNamaMakanan"
+            android:text="Nama Makanan"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginBottom="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvDeskripsi"
+            android:text="Deskripsi makanan"
+            android:textSize="12sp"
+            android:textColor="#888888"
+            android:maxLines="2"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvHarga"
+                android:text="Rp 0"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#FF6B00"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/btnTambah"
+                android:text="+ Tambah"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#FF6B00"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

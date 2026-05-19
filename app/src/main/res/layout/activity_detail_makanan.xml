@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- GAMBAR -->
+        <ImageView
+            android:id="@+id/ivGambar"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:background="#E0E0E0"/>
+
+        <!-- KONTEN -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvNama"
+                android:text="Nama Makanan"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvHarga"
+                android:text="Rp 0"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#FF6B00"
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvStok"
+                android:text="Stok: 0"
+                android:textSize="13sp"
+                android:textColor="#888888"
+                android:layout_marginBottom="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#F0F0F0"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:text="Deskripsi"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvDeskripsi"
+                android:text="Deskripsi makanan"
+                android:textSize="14sp"
+                android:textColor="#555555"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginBottom="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <!-- JUMLAH -->
+            <TextView
+                android:text="Jumlah"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp">
+
+                <Button
+                    android:id="@+id/btnKurang"
+                    android:text="-"
+                    android:textSize="18sp"
+                    android:textColor="#FF6B00"
+                    android:backgroundTint="#FFF0E6"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
+
+                <TextView
+                    android:id="@+id/tvJumlah"
+                    android:text="1"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:id="@+id/btnTambah"
+                    android:text="+"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#FF6B00"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
+
+            </LinearLayout>
+
+            <!-- TOTAL -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:text="Total:"
+                    android:textSize="16sp"
+                    android:textColor="#000000"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/tvTotal"
+                    android:text="Rp 0"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#FF6B00"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <!-- TOMBOL TAMBAH KE KERANJANG -->
+            <Button
+                android:id="@+id/btnTambahKeranjang"
+                android:text="Tambah ke Keranjang"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#FF6B00"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
