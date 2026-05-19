@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <FrameLayout
+        android:id="@+id/layoutLoading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="visible">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            app:lottie_rawRes="@raw/loader"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true" />
+    </FrameLayout>
+
+    <!-- MAP + PIN -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <org.osmdroid.views.MapView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!-- SHADOW -->
+        <ImageView
+            android:id="@+id/imgPinShadow"
+            android:layout_width="24dp"
+            android:layout_height="8dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/bg_pin_shadow"
+            android:alpha="0.4" />
+
+        <!-- PIN -->
+        <ImageView
+            android:id="@+id/imgPin"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:translationY="-20dp"
+            android:src="@drawable/ic_pin_location" />
+
+    </FrameLayout>
+
+    <!-- FORM -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+
+            <!-- HEADER -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp">
+
+                <ImageButton
+                    android:id="@+id/btnBack"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_back"
+                    android:contentDescription="Kembali"
+                    app:tint="@color/text_primary"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Detail Alamat"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/nunito_bold"/>
+            </LinearLayout>
+
+            <!-- ALAMAT MAP -->
+            <TextView
+                android:id="@+id/textAlamatMap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:padding="12dp"
+                android:text="Geser peta untuk menentukan alamat"
+                android:textSize="14sp"
+                android:background="@drawable/bg_alamat_map"
+                android:lineSpacingExtra="2dp"/>
+
+            <!-- NO RUMAH -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="12dp"
+                android:hint="Nomor Rumah"
+                app:boxStrokeColor="@color/red_coral"
+                app:hintTextColor="@color/red_coral">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editNoRumah"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- PATOKAN -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="8dp"
+                android:hint="Patokan (contoh: dekat masjid)"
+                app:boxStrokeColor="@color/red_coral"
+                app:hintTextColor="@color/red_coral">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editPatokan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- SIMPAN -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSimpanLokasi"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="12dp"
+                android:text="Simpan Lokasi"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/red_coral"
+                android:textColor="@android:color/white"
+                app:cornerRadius="16dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutKeranjang"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        app:elevation="0dp"
+        android:background="@color/red_coral">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarKeranjang"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/red_coral"
+            app:title="Keranjang"
+            app:titleTextColor="@android:color/white"
+            app:contentInsetStartWithNavigation="0dp"
+            app:navigationIcon="@drawable/ic_arrow_back" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollKeranjang"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:paddingBottom="88dp"
+        android:overScrollMode="never">
+
+        <FrameLayout
+            android:id="@+id/containerKeranjang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewKeranjang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                android:nestedScrollingEnabled="false"
+                android:clipToPadding="false"
+                android:paddingTop="14dp"
+                android:paddingBottom="8dp"
+                android:paddingHorizontal="14dp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/textKosong"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:minHeight="520dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/ic_cart_empty"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Keranjang kosong" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Keranjangmu masih kosong"
+                    android:fontFamily="@font/nunito_bold"
+                    android:textSize="17sp"
+                android:textColor="#1A1A1A"
+                    android:layout_marginTop="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tambahkan menu favoritmu sekarang"
+                    android:fontFamily="@font/nunito_regular"
+                    android:textSize="13sp"
+                    android:textColor="@color/text_muted"
+                    android:layout_marginTop="6dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonCariMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lihat Menu"
+                    android:fontFamily="@font/nunito_bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:layout_marginTop="24dp"
+                    android:paddingHorizontal="36dp"
+                    android:paddingVertical="10dp"
+                    app:backgroundTint="@color/red_coral"
+                    app:cornerRadius="24dp"
+                    app:elevation="0dp"
+                    app:rippleColor="#33FFFFFF" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/progressBarKeranjang"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:minHeight="520dp"
+                android:visibility="visible">
+
+                <ProgressBar
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:indeterminateTint="@color/red_coral" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Memuat keranjang"
+                    android:fontFamily="@font/nunito_regular"
+                    android:textSize="13sp"
+                    android:textColor="@color/text_muted"
+                    android:layout_marginTop="12dp" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardCheckoutFooter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:visibility="gone"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="18dp"
+        android:layout_margin="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/red_coral" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="16dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="3dp">
+
+                        <ImageView
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:src="@drawable/ic_cart_small"
+                            app:tint="@color/red_coral"
+                            android:layout_marginEnd="5dp"
+                            android:contentDescription="keranjang" />
+
+                        <TextView
+                            android:id="@+id/textJumlahDipilih"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0 item dipilih"
+                            android:fontFamily="@font/nunito_regular"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_muted" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textTotalHarga"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp 0"
+                        android:fontFamily="@font/nunito_bold"
+                        android:textSize="20sp"
+                        android:textColor="@color/red_coral" />
+
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonCheckout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="Checkout"
+                    android:fontFamily="@font/nunito_bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:paddingHorizontal="26dp"
+                    android:enabled="false"
+                    app:backgroundTint="@color/red_coral"
+                    app:cornerRadius="25dp"
+                    app:elevation="0dp"
+                    app:rippleColor="#33FFFFFF"
+                    app:icon="@drawable/ic_checkout_arrow"
+                    app:iconGravity="end"
+                    app:iconPadding="8dp"
+                    app:iconTint="@android:color/white" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

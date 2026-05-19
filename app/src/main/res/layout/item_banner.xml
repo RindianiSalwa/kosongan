@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    app:strokeWidth="0dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageBanner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_banner_placeholder"
+            android:contentDescription="banner promo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:background="@drawable/bg_banner_gradient"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="14dp">
+
+            <TextView
+                android:id="@+id/textBannerLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Promo Hari Ini"
+                android:fontFamily="@font/nunito_bold"
+                android:textSize="11sp"
+                android:textColor="#FFCDD2"
+                android:letterSpacing="0.08" />
+
+            <TextView
+                android:id="@+id/textBannerJudul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diskon 20% untuk semua menu"
+                android:fontFamily="@font/nunito_bold"
+                android:textSize="15sp"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+    </FrameLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="14dp"
+    app:cardElevation="2dp"
+    app:cardMaxElevation="4dp"
+    app:cardUseCompatPadding="true"
+    android:backgroundTint="@color/white">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Informasi Pembeli -->
+        <TextView
+            android:id="@+id/tvNamaPembeli"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nama Pembeli"
+            android:fontFamily="@font/nunito_bold"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/text_dark" />
+
+        <TextView
+            android:id="@+id/tvNoHp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="08123456789"
+            android:fontFamily="@font/nunito_bold"
+            android:textSize="14sp"
+            android:textColor="@color/text_muted"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/tvWaktu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Waktu Pesan"
+            android:fontFamily="@font/nunito_bold"
+            android:textColor="@color/text_dark"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/tvWaktuUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update: -"
+            android:fontFamily="@font/nunito_bold"
+            android:textSize="12sp"
+            android:textColor="@android:color/darker_gray"
+            android:visibility="gone"
+            android:layout_marginBottom="6dp"/>
+
+        <TextView
+            android:id="@+id/tvAlamat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Alamat"
+            android:fontFamily="@font/nunito_bold"
+            android:textColor="@color/text_dark"
+            android:layout_marginBottom="6dp"/>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            android:layout_marginVertical="8dp"/>
+
+        <!-- Daftar Menu (Horizontal RecyclerView) -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvDaftarMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Catatan -->
+        <TextView
+            android:id="@+id/tvCatatan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Catatan: Tanpa sambal"
+            android:fontFamily="@font/nunito_bold"
+            android:textColor="#757575"
+            android:visibility="gone"
+            android:layout_marginBottom="6dp"/>
+
+        <!-- Total Harga -->
+        <TextView
+            android:id="@+id/tvTotalHarga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total: Rp45.000"
+            android:fontFamily="@font/nunito_bold"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/red_coral"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/tvStatusPesanan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Status: Selesai"
+            android:fontFamily="@font/montserrat_bold"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="#2E7D32"
+            android:layout_marginTop="2dp"/>
+
+        <!-- Tombol Pesan Lagi -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonPesanLagi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pesan Lagi"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:backgroundTint="@color/red_coral"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:visibility="gone"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="6dp"
+            app:cornerRadius="12dp"
+            app:elevation="0dp"/>
+
+        <!-- Tombol Aksi -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginTop="12dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMasak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Masak"
+                android:fontFamily="@font/montserrat_bold"
+                android:backgroundTint="@color/red_coral"
+                android:textColor="@android:color/white"
+                android:textAllCaps="false"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="6dp"
+                app:cornerRadius="12dp"
+                app:elevation="0dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

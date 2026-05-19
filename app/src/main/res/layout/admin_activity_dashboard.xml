@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/red_coral"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarAdmin"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/red_coral"
+            app:title="Dashboard Admin"
+            app:titleTextColor="@android:color/white"
+            app:titleTextAppearance="@style/ToolbarTitleStyle"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/red_coral"
+                android:paddingBottom="48dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="16dp"
+                    android:paddingHorizontal="24dp">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/adminImage"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        app:lottie_rawRes="@raw/dashboard_admin"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_clipToCompositionBounds="false" />
+
+                    <TextView
+                        android:id="@+id/adminGreeting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Halo Admin! "
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textColor="@color/white"
+                        android:textSize="22sp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="4dp" />
+
+                    <TextView
+                        android:id="@+id/adminSubtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Siap bekerja hari ini?"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textColor="#CCFFFFFF"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp"
+                android:paddingBottom="32dp"
+                android:layout_marginTop="-32dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MENU UTAMA"
+                    android:textSize="10sp"
+                    android:letterSpacing="0.14"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="@color/text_muted"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="48dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardKelolaMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="@color/bg_white">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnKelolaMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:text="Kelola Menu"
+                        android:textAllCaps="false"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textColor="@color/red_coral"
+                        android:textSize="15sp"
+                        app:cornerRadius="18dp"
+                        app:backgroundTint="@color/bg_white"
+                        app:icon="@drawable/ic_menu"
+                        app:iconTint="@color/maroon_700"
+                        app:iconGravity="textStart"
+                        app:iconPadding="12dp"
+                        android:elevation="0dp"
+                        android:stateListAnimator="@null" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardKelolaPesanan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="@color/bg_white">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnKelolaPesanan"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:text="Kelola Pesanan"
+                        android:textAllCaps="false"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textColor="@color/red_coral"
+                        android:textSize="15sp"
+                        app:cornerRadius="18dp"
+                        app:backgroundTint="@color/bg_white"
+                        app:icon="@drawable/ic_order"
+                        app:iconTint="@color/maroon_700"
+                        app:iconGravity="textStart"
+                        app:iconPadding="12dp"
+                        android:elevation="0dp"
+                        android:stateListAnimator="@null" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardRiwayatPesanan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="@color/bg_white">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnRiwayatPesanan"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:text="Riwayat Pesanan"
+                        android:textAllCaps="false"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textColor="@color/red_coral"
+                        android:textSize="15sp"
+                        app:cornerRadius="18dp"
+                        app:backgroundTint="@color/bg_white"
+                        app:icon="@drawable/ic_history"
+                        app:iconTint="@color/maroon_700"
+                        app:iconGravity="textStart"
+                        app:iconPadding="12dp"
+                        android:elevation="0dp"
+                        android:stateListAnimator="@null" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

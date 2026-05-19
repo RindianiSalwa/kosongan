@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dapurandia.app">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+
+    <application
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:enableOnBackInvokedCallback="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DapurAndiaApp">
+        <activity
+            android:name=".pembeli.PaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pembeli.TrackingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".kurir.MapActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pembeli.LokasiSaatIniActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pembeli.KeranjangActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pembeli.PilihLokasiActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".kurir.PesananAktifActivity"
+            android:exported="false" />
+        <activity
+            android:name=".kurir.KurirDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".kurir.LoginKurirActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" /> <!-- SplashActivity jadi activity pertama (launcher) -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- LandingActivity setelah splash -->
+        <activity
+            android:name=".LandingActivity"
+            android:exported="false" /> <!-- Admin -->
+        <activity
+            android:name=".admin.LoginAdminActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".admin.AdminDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.KelolaMenuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.DetailMenuAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.TambahMenuAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.KelolaPesananActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.RiwayatPesananActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.EditMenuAdminActivity"
+            android:exported="false" /> <!-- Pembeli -->
+        <activity
+            android:name=".pembeli.LoginPembeliActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".pembeli.ForgotPasswordPembeliActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".pembeli.RegisterPembeliActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".pembeli.MainPembeliActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pembeli.EditProfilePembeliActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pembeli.DetailMenuPembeliActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pembeli.CheckoutActivity"
+            android:exported="false" /> <!-- File Provider -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>
